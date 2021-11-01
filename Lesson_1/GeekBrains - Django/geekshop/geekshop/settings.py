@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'mainapp',
+    'authapp',
+    'basketapp'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'geekshop.wsgi.application'
+
+AUTH_USER_MODEL = 'authapp.ShopUser'
 
 
 # Database

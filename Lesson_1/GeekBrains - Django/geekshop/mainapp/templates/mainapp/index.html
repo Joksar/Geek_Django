@@ -4,11 +4,7 @@
 {% block menu %}
     <div class="slider">
         <div class="header clearfix">
-            <a href="index.html" class="logo"></a>
-            <ul class="menu">
-                {% include 'mainapp/includes/inc_main_menu.html' %}
-            </ul>
-            <a href="#" class="search"></a>
+            {% include 'mainapp/includes/inc_main_menu.html' %}
         </div>
         <div class="text-slider">
             <h3 class="green">тенденции</h3>
@@ -33,7 +29,7 @@
         <div class="tab-content">
             {% for product in products %}
             <div class="block">
-                <a href="#"><img src="/media/{{ product.image }}" alt="">
+                <a href="{% url 'basket:add' product.pk %}"><img src="/media/{{ product.image }}" alt="">
                     <div class="text">
                         <img src="/static/img/icon-hover.png" alt="img">
                         <h4> {{ product.name }}</h4>
