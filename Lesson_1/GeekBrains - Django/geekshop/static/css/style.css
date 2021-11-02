@@ -695,15 +695,17 @@ html, body {
 }
 .basket {
 	display: block;
-	width: 23px;
+	width: 100px;
 	height: 23px;	
 	background-image: url(/static/img/basket.png);
 	position: absolute;
 	top: 63px;
-	/*left: 1210px;*/
-	left: 1185px;
+	left: 1210px;
     text-decoration: none;
     color: #555;
+    padding-left: 27px;
+    background-repeat: no-repeat;
+    font-size: 12px;
 }
 
 .basket span {
