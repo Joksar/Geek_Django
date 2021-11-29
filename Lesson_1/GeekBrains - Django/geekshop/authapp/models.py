@@ -9,6 +9,7 @@ from django.db.models.signals import post_save, post_delete
 
 class ShopUser(AbstractUser):
     avatar = models.ImageField(upload_to='users_avatars', blank=True, verbose_name='Аватар')
+    avatar_url = models.CharField(max_length=128, blank=True, null=True)
     age = models.PositiveSmallIntegerField(verbose_name='Возраст')
 
     activate_key = models.CharField(max_length=128, verbose_name='Ключ активации', blank=True, null=True)
