@@ -15,6 +15,7 @@ class OrderForm(forms.ModelForm):
             field.help_text = ''
 
 class OrderItemForm(forms.ModelForm):
+    price = forms.CharField(label='Цена', required=False)
 
     class Meta:
         model = OrderItem
